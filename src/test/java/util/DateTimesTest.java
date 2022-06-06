@@ -22,4 +22,11 @@ class DateTimesTest {
 		boolean holiday = DateTimes.isHoliday(day);
 		assertThat(holiday).isTrue();
 	}
+
+	@Test
+	void childrenDayIsHoliday() {
+		LocalDate day = LocalDate.of(2020, 5, 5);
+		boolean holiday = DateTimes.isHoliday(day);
+		assertThat(holiday).isTrue();
+	}
 }
