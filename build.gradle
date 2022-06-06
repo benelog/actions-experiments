@@ -28,6 +28,7 @@ test {
 jacocoTestReport {
 	dependsOn test
 	reports {
+		xml.enabled true
 		csv.enabled true
 		csv.destination = file("${buildDir}/reports/jacoco/jacoco.csv")
 	}
