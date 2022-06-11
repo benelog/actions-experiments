@@ -37,6 +37,12 @@ jobs:
       with:
         report_paths: '**/build/test-results/test/TEST-*.xml'
 
+    - name: Test Summary
+      uses: test-summary/action@v1
+      with:
+        paths: '**/build/test-results/test/TEST-*.xml'
+      if: always()
+
     - name: Generate JaCoCo Badge
       uses: cicirello/jacoco-badge-generator@v2
       with:
