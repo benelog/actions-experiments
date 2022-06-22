@@ -10,7 +10,8 @@ public class DateTimes {
 	private static final Set<MonthDay> LEGAL_HOLIDAYS = Set.of(
 		MonthDay.of(Month.DECEMBER, 25),
 		MonthDay.of(Month.MAY, 5),
-		MonthDay.of(Month.AUGUST, 15)
+		MonthDay.of(Month.AUGUST, 15),
+		MonthDay.of(Month.OCTOBER, 9)
 	);
 
 	public static boolean isHoliday(LocalDate day) {
