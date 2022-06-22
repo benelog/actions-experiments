@@ -30,6 +30,7 @@ class DateTimesTest {
 			LocalDate.of(2022, 6, 4), // 토요일
 			LocalDate.of(2022, 6, 5), // 일요일
 			LocalDate.of(2022, 8, 15), // 광복절
+			LocalDate.of(2020, 10, 9), // 한글날
 			LocalDate.of(2020, 12, 25), // 크리스마스
 			LocalDate.of(2020, 5, 5) // 어린이날
 		);
