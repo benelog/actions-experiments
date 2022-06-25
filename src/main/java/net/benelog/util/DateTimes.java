@@ -11,6 +11,7 @@ public class DateTimes {
 		MonthDay.of(Month.JANUARY, 1),
 		MonthDay.of(Month.DECEMBER, 25),
 		MonthDay.of(Month.MAY, 5),
+		MonthDay.of(Month.JUNE, 6),
 		MonthDay.of(Month.AUGUST, 15),
 		MonthDay.of(Month.OCTOBER, 9)
 	);
