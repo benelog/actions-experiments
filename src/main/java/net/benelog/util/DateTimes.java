@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class DateTimes {
 	private static final Set<MonthDay> LEGAL_HOLIDAYS = Set.of(
+		MonthDay.of(Month.JANUARY, 1),
 		MonthDay.of(Month.DECEMBER, 25),
 		MonthDay.of(Month.MAY, 5),
 		MonthDay.of(Month.AUGUST, 15),

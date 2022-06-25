@@ -27,6 +27,7 @@ class DateTimesTest {
 
 	static Stream<LocalDate> provideHolidays() {
 		return Stream.of(
+			LocalDate.of(2020, 1, 1), // 신정
 			LocalDate.of(2022, 6, 4), // 토요일
 			LocalDate.of(2022, 6, 5), // 일요일
 			LocalDate.of(2022, 8, 15), // 광복절
