@@ -39,8 +39,11 @@ jacocoTestReport {
 
 
 spotbugs {
+	toolVersion = '4.7.0'
 	ignoreFailures = true
-	reportLevel = "high"
+	reportLevel = 'high'
+	effort = 'max'
+	showProgress = true
 }
 
 spotbugsMain {
