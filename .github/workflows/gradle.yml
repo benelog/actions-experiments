@@ -43,6 +43,12 @@ jobs:
         name: Checkstyle Report
         path: 'build/reports/checkstyle/*.xml'
 
+    - name: Publish ktlint report
+      uses: jwgmeligmeyling/checkstyle-github-action@v1.2
+      with:
+        name: ktlint Report
+        path: 'build/reports/ktlint/**/*.xml'
+
     - name: Publish test report
       uses: mikepenz/action-junit-report@v3.0.3
       if: always() # always run even if the previous step fails
