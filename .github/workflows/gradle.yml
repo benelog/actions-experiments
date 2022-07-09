@@ -33,18 +33,21 @@ jobs:
 
     - name: Publish SpotBugs report
       uses: jwgmeligmeyling/spotbugs-github-action@v1.2
+      if: always()
       with:
         name: SpotBugs Report
         path: 'build/reports/spotbugs/main.xml'
 
     - name: Publish Checkstyle report
       uses: jwgmeligmeyling/checkstyle-github-action@v1.2
+      if: always()
       with:
         name: Checkstyle Report
         path: 'build/reports/checkstyle/*.xml'
 
     - name: Publish ktlint report
       uses: jwgmeligmeyling/checkstyle-github-action@v1.2
+      if: always()
       with:
         name: ktlint Report
         path: 'build/reports/ktlint/**/*.xml'
@@ -57,9 +60,9 @@ jobs:
 
     - name: Test Summary
       uses: test-summary/action@v1
+      if: always()
       with:
         paths: '**/build/test-results/test/TEST-*.xml'
-      if: always()
 
     - name: Add coverage comment
       id: jacoco
