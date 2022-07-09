@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'jacoco'
 	id 'com.github.spotbugs' version '5.0.8'
+	id 'checkstyle'
 }
 group = 'net.benelog.actions.experiments'
 version = '0.0.2-SNAPSHOT'
@@ -55,5 +56,11 @@ spotbugsMain {
 			enabled = true
 		}
 	}
+}
+
+checkstyle {
+	configFile = file("./naver-checkstyle-rules.xml")
+	configProperties = [suppressionFile: "naver-checkstyle-suppressions.xml"]
+	toolVersion ="10.3"
 }
 
