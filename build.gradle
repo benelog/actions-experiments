@@ -1,8 +1,10 @@
 plugins {
 	id 'java'
+	id "org.jetbrains.kotlin.jvm" version "1.6.21"
 	id 'jacoco'
 	id 'com.github.spotbugs' version '5.0.8'
 	id 'checkstyle'
+	id "org.jlleitschuh.gradle.ktlint" version "10.3.0"
 }
 group = 'net.benelog.actions.experiments'
 version = '0.0.2-SNAPSHOT'
@@ -10,6 +12,24 @@ version = '0.0.2-SNAPSHOT'
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.compileJava {
+	dependsOn compileKotlin
+	classpath += files(compileKotlin.destinationDir)
+}
+
+tasks.compileKotlin {
+	kotlinOptions {
+		jvmTarget = "17"
+	}
+}
+
+tasks.compileTestKotlin {
+	kotlinOptions {
+		jvmTarget = "17"
+		languageVersion = "1.7"
+	}
 }
 
 repositories {
@@ -64,3 +84,11 @@ checkstyle {
 	toolVersion ="10.3"
 }
 
+ktlint {
+	version = "0.45.2"
+	reporters {
+		reporter "checkstyle"
+		reporter "plain"
+	}
+	enableExperimentalRules = true
+}
