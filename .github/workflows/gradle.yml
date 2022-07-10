@@ -27,7 +27,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Execute check
-      uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+      uses: gradle/gradle-build-action@v2.2.1
       with:
         arguments: check
 
