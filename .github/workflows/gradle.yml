@@ -50,6 +50,7 @@ jobs:
       if: always()
       with:
         name: ktlint Report
+        title: ktlint Report
         path: 'build/reports/ktlint/**/*.xml'
 
     - name: Publish test report
