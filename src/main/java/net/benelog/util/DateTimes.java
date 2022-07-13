@@ -4,6 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
+
 import java.util.Set;
 
 public class DateTimes {
@@ -16,7 +17,8 @@ public class DateTimes {
 		MonthDay.of(Month.OCTOBER, 9)
 	);
 
-	public static boolean isHoliday(LocalDate day) {
+	public static boolean isHoliday(LocalDate day)
+	{
 		DayOfWeek dayOfWeek = day.getDayOfWeek();
 		if (dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY) {
 			return true;
