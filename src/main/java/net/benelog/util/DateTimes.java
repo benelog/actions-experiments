@@ -23,9 +23,6 @@ public class DateTimes {
 		}
 
 		MonthDay monthDay = MonthDay.of(day.getMonth(), day.getDayOfMonth());
-		if (LEGAL_HOLIDAYS.contains(monthDay)) {
-			return true;
-		}
-		return false;
+		return LEGAL_HOLIDAYS.contains(monthDay);
 	}
 }
